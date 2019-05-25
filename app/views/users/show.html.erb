@@ -1,0 +1,7 @@
+<%= @user.name %>詳細
+
+<%= month_calendar do |date| %>
+  <%= date.day %>
+<% end %>
+
+<%= link_to '目標登録', edit_user_path(@user.id) %>

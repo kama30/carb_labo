@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CarbLabo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= link_to 'carb labo', root_path %>
+    
+    <%= link_to '新規登録', signup_path %>
+    <%= link_to 'ログイン', login_path %>
+    <%= link_to 'ログアウト', logout_path, method: :delete %>
+    
+    
+    <%= flash[:notice] %>
+    <%= yield %>
+  </body>
+</html>

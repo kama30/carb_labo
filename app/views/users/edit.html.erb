@@ -1,0 +1,8 @@
+<h1>目標登録</h1>
+
+<%= form_with(model: @user, local: true) do |f| %>
+  <%= f.label :goal, '目標' %>
+  <%= f.number_field :goal %>
+  
+  <%= f.submit '目標登録' %>
+<% end %>

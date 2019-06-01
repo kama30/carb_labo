@@ -1,3 +1,18 @@
-トップページ
-
-<%= link_to '簡易糖質計算', test_path %>
+<div class = "row">
+  <div class="offset-md-3 col-md-6 mt-3">
+    <ul class = "list-group">
+      <li class = "list-group-item active">
+        <h1 class = "text-center" >carb labo とは？</h1>
+      </li>
+      <li class = "list-group-item" >
+        <p>栄養表示から糖質量を計算するサイトです。<br>
+        エネルギー源として重要な糖質(炭水化物の一部)、脂質、たんぱく質を三大栄養素と言います。<br>
+        これらを燃焼したとき、体で利用できるエネルギーの値は1gあたり糖質4kcal、脂質9kcal、たんぱく質4kcal程です。</p>
+        <p><strong>カロリー(kcal) = 糖質(g)×4kcal + 脂質(g)×9kcal + たんぱく質(g)×4kcal</strong></p>
+        <p>上記の考えを利用することにより、カロリーと三大栄養素の量から大まかに糖質量を計算することができます。</p>
+        <p><strong>糖質(g) = ( カロリー(kcal) - 脂質(g)×9kcal - たんぱく質(g)×4kcal ) ÷4</strong></p>
+        <%= link_to '試しに糖質計算してみる', test_path, class: 'btn btn-info offset-md-3 col-md-6 mt-3 mb-2' %>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -2,7 +2,7 @@
   <h1>食事新規登録</h1>
 </div>
   
-<div class="offset-sm-3 col-sm-6 mt-3">
+<div class="offset-md-3 col-md-6 mt-3">
   <%= form_with(model: @diet, local: true) do |f| %>
     <%= render 'layouts/error_messages', model: f.object %>
     
@@ -16,27 +16,27 @@
       </li>
       
       <li class="list-group-item">
-        <%= f.number_field :total_amount, step: '0.01',min: '0', class: 'form-control col-sm-9 d-inline', placeholder: '基準量' %>　gあたり
+        <%= f.number_field :total_amount, step: '0.01',min: '0', class: 'form-control col-md-9 d-inline', placeholder: '基準量' %>　gあたり
       </li>
       
       <li class="list-group-item">
-        <%= f.number_field :calorie, step: '0.01',min: '0', class: 'form-control col-sm-9 d-inline', placeholder: 'カロリー' %>　kcal
+        <%= f.number_field :calorie, step: '0.01',min: '0', class: 'form-control col-md-9 d-inline', placeholder: 'カロリー' %>　kcal
       </li>
       
       <li class="list-group-item">
-        <%= f.number_field :protein, step: '0.01',min: '0', class: 'form-control col-sm-9 d-inline', placeholder: 'たんぱく質' %>　g
+        <%= f.number_field :protein, step: '0.01',min: '0', class: 'form-control col-md-9 d-inline', placeholder: 'たんぱく質' %>　g
       </li>
       
       <li class="list-group-item">
-        <%= f.number_field :fat, step: '0.01',min: '0', class: 'form-control col-sm-9 d-inline', placeholder: '脂質' %>　g
+        <%= f.number_field :fat, step: '0.01',min: '0', class: 'form-control col-md-9 d-inline', placeholder: '脂質' %>　g
       </li>
       
       <li class="list-group-item">
-        <%= f.number_field :carb, step: '0.01',min: '0', class: 'form-control col-sm-9 d-inline', placeholder: '炭水化物' %>　g
+        <%= f.number_field :carb, step: '0.01',min: '0', class: 'form-control col-md-9 d-inline', placeholder: '炭水化物' %>　g
       </li>
       
       <li class="list-group-item">
-        <%= f.number_field :intake, step: '0.01',min: '0', class: 'form-control col-sm-9 d-inline', placeholder: '摂取量' %>　g
+        <%= f.number_field :intake, step: '0.01',min: '0', class: 'form-control col-md-9 d-inline', placeholder: '摂取量' %>　g
       </li>
     </ul>
       

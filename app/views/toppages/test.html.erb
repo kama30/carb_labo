@@ -2,32 +2,32 @@
   <h1>簡易糖質計算</h1>
 </div>
 
-<div class="offset-sm-3 col-sm-6 mt-3">
+<div class="offset-md-3 col-md-6 mt-3">
   <form oninput = "sugar.value = ((( calorie.value - protein.value * 4 - fat.value * 9 ) / 4 ) / total_amount.value * intake.value ).toFixed(2)">
     <ul class = "list-group mb-3">
       
       <li class="list-group-item">
-        <input name = "total_amount" type = "number" step = "0.01" class = "form-control col-sm-9 d-inline" placeholder = "基準量" >　gあたり
+        <input name = "total_amount" type = "number" step = "0.01" class = "form-control col-md-9 d-inline" placeholder = "基準量" >　gあたり
       </li>
       
       <li class="list-group-item">
-        <input name = "calorie" type = "number" step = "0.01" class = "form-control col-sm-9 d-inline" placeholder = "カロリー" >　kcal
+        <input name = "calorie" type = "number" step = "0.01" class = "form-control col-md-9 d-inline" placeholder = "カロリー" >　kcal
       </li>
       
       <li class="list-group-item">
-        <input name = "protein" type = "number" step = "0.01" class = "form-control col-sm-9 d-inline" placeholder = "タンパク質" >　g
+        <input name = "protein" type = "number" step = "0.01" class = "form-control col-md-9 d-inline" placeholder = "タンパク質" >　g
       </li>
       
       <li class="list-group-item">
-        <input name = "fat" type = "number" step = "0.01" class = "form-control col-sm-9 d-inline" placeholder = "脂質" >　g
+        <input name = "fat" type = "number" step = "0.01" class = "form-control col-md-9 d-inline" placeholder = "脂質" >　g
       </li>
       
       <li class="list-group-item">
-        <input name = "carb" type = "number" step = "0.01" class = "form-control col-sm-9 d-inline" placeholder = "炭水化物" >　g
+        <input name = "carb" type = "number" step = "0.01" class = "form-control col-md-9 d-inline" placeholder = "炭水化物" >　g
       </li>
       
       <li class="list-group-item">
-        <input name = "intake" type = "number" step = "0.01" class = "form-control col-sm-9 d-inline" placeholder = "摂取量" >　g
+        <input name = "intake" type = "number" step = "0.01" class = "form-control col-md-9 d-inline" placeholder = "摂取量" >　g
       </li>
       
       <li class="list-group-item active">

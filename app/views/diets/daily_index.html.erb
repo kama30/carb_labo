@@ -2,7 +2,7 @@
 
 <%= paginate @diets %> 
 
-<div class="offset-md-3 col-md-6 mt-3">
+<div class="offset-sm-3 col-sm-6 mt-3">
   <%= link_to '食事登録', {controller: "diets", action: "daily_new", start_time: params[:start_time]}, class: 'btn btn-info btn-block' %>
   <%= link_to '戻る', user_path(current_user.id), class: 'btn btn-secondary btn-block' %>
 </div>

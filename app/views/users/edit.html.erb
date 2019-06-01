@@ -1,8 +1,17 @@
-<h1>目標登録</h1>
+<div class="text-center">
+  <h1>目標登録</h1>
+</div>
 
-<%= form_with(model: @user, local: true) do |f| %>
-  <%= f.label :goal, '目標' %>
-  <%= f.number_field :goal %>
-  
-  <%= f.submit '目標登録' %>
-<% end %>
+<div class="row">
+  <div class="col-md-6 offset-md-3 mt-3">
+    <%= form_with(model: @user, local: true) do |f| %>
+      <%= render 'layouts/error_messages', model: f.object %>
+    
+      <div class="form-group">
+        <%= f.number_field :goal, class: 'form-control', placeholder: '一日あたり糖質摂取量' %>
+      </div>
+      
+      <%= f.submit '目標登録', class: 'btn btn-info btn-block' %>
+    <% end %>
+  </div>
+</div>

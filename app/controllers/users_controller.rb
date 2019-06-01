@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:show, :edit, :update]
   
   def show
+    @diets = Diet.all
   end
   
   def new
@@ -13,10 +14,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:notice] = 'ユーザを登録しました。'
+      flash[:success] = 'ユーザを登録しました。'
       redirect_to @user
     else
-      flash.now[:notice] = 'ユーザの登録に失敗しました。'
+      flash.now[:danger] = 'ユーザの登録に失敗しました。'
       render :new
     end
   end
@@ -26,10 +27,10 @@ class UsersController < ApplicationController
   
   def update
     if @user.update(user_params)
-      flash[:notice] = '目標を設定しました。'
+      flash[:success] = '目標を設定しました。'
       redirect_to @user
     else
-      flash.now[:notice] = '目標の設定に失敗しました'
+      flash.now[:danger] = '目標の設定に失敗しました'
       render :edit
     end
   end

@@ -10,22 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_25_095055) do
+ActiveRecord::Schema.define(version: 2019_05_27_024835) do
 
   create_table "diets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id_id"
+    t.bigint "user_id"
     t.datetime "start_time"
     t.string "name"
-    t.integer "total_amount"
-    t.integer "intake"
-    t.integer "calorie"
-    t.integer "protein"
-    t.integer "fat"
-    t.integer "carb"
-    t.integer "sugar"
+    t.decimal "total_amount", precision: 6, scale: 2
+    t.decimal "intake", precision: 6, scale: 2
+    t.decimal "calorie", precision: 6, scale: 2
+    t.decimal "protein", precision: 6, scale: 2
+    t.decimal "fat", precision: 6, scale: 2
+    t.decimal "carb", precision: 6, scale: 2
+    t.decimal "sugar", precision: 6, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id_id"], name: "index_diets_on_user_id_id"
+    t.index ["user_id"], name: "index_diets_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -37,4 +37,5 @@ ActiveRecord::Schema.define(version: 2019_05_25_095055) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "diets", "users"
 end

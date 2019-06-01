@@ -1,25 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user_id: 
-  start_time: 2019-05-25 09:50:55
+  user: one
+  start_time: 2019-05-27 02:48:35
   name: MyString
-  total_amount: 1
-  intake: 1
-  calorie: 1
-  protein: 1
-  fat: 1
-  carb: 1
-  sugar: 1
+  total_amount: 9.99
+  intake: 9.99
+  calorie: 9.99
+  protein: 9.99
+  fat: 9.99
+  carb: 9.99
+  sugar: 9.99
 
 two:
-  user_id: 
-  start_time: 2019-05-25 09:50:55
+  user: two
+  start_time: 2019-05-27 02:48:35
   name: MyString
-  total_amount: 1
-  intake: 1
-  calorie: 1
-  protein: 1
-  fat: 1
-  carb: 1
-  sugar: 1
+  total_amount: 9.99
+  intake: 9.99
+  calorie: 9.99
+  protein: 9.99
+  fat: 9.99
+  carb: 9.99
+  sugar: 9.99

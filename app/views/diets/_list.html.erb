@@ -1,0 +1,14 @@
+<div class="offset-md-3 col-md-6 mt-3">
+  <ul class = "list-group">
+    <% diets.each do |diet| %>
+      <li class = "list-group-item">
+        <div>
+          <%= diet.start_time.to_date %>
+        </div>
+        <div>
+          <%= link_to diet.name, diet_path(diet.id) %>　　　　　<%= diet.sugar %> g
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

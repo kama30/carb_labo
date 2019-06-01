@@ -1,14 +1,18 @@
 <div class="row">
   <div class="offset-md-2 col-md-8">
+    
+    <% if current_user.goal == nil %>
+      <div id="error_explanation" class="alert alert-info">
+        目標が設定されていません。登録は<%= link_to 'こちら', edit_user_path(current_user.id) %>
+      </div>
+    <% end %>
+    
     <%= month_calendar events: @diets do |date, diets| %>
       <%= link_to date.day, controller: "diets", action: "daily_index", start_time: date  %>
       
       <!--目標判定-->
       <div class = "mt-3 text-right">
         <% if current_user.goal == nil %>
-          <div class = "text-muted" >
-            目標未設定
-          </div>
         <% elsif @diets.where(start_time: date, user_id: current_user.id).sum(:sugar) == 0 %>
           <div class = "text-muted" >
             未入力

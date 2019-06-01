@@ -1,31 +1,33 @@
-<div class="offset-md-3 col-md-6">
-  <ul class = "list-group mb-3">
-    <li class="list-group-item active">
-      <h2><%= @diet.name %></h2><%= @diet.start_time.to_date %>
-    </li>
-    <li class="list-group-item">
-      <%= @diet.total_amount %> gあたり
-    </li>
-    <li class="list-group-item">
-      カロリー　　　：<%= @diet.calorie %> kcal
-    </li>
-    <li class="list-group-item">
-      タンパク質　　：<%= @diet.protein %> g
-    </li>
-    <li class="list-group-item">
-      脂質　　　　　：<%= @diet.fat %> g
-    </li>
-    <li class="list-group-item">
-      炭水化物　　　：<%= @diet.carb %> g
-    </li>
-    <li class="list-group-item">
-      摂取量　　　　：<%= @diet.intake %> g
-    </li>
-    <li class="list-group-item">
-      摂取糖質量　　：<%= @diet.sugar %> g
-    </li>
-  </ul>
-
-<%= link_to '編集', edit_diet_path(@diet), class: 'btn btn-info btn-block' %>
-<%= link_to '削除', @diet, method: :delete, class: 'btn btn-secondary btn-block', data: { confirm: '本当に削除してよろしいですか？' } %>
+<div class ="row">
+  <div class="offset-md-3 col-md-6">
+    <ul class = "list-group mb-3">
+      <li class="list-group-item active">
+        <h2><%= @diet.name %></h2><%= @diet.start_time.to_date %>
+      </li>
+      <li class="list-group-item">
+        <%= @diet.total_amount %> gあたり
+      </li>
+      <li class="list-group-item">
+        カロリー　　　：<%= @diet.calorie %> kcal
+      </li>
+      <li class="list-group-item">
+        タンパク質　　：<%= @diet.protein %> g
+      </li>
+      <li class="list-group-item">
+        脂質　　　　　：<%= @diet.fat %> g
+      </li>
+      <li class="list-group-item">
+        炭水化物　　　：<%= @diet.carb %> g
+      </li>
+      <li class="list-group-item">
+        摂取量　　　　：<%= @diet.intake %> g
+      </li>
+      <li class="list-group-item">
+        摂取糖質量　　：<%= @diet.sugar %> g
+      </li>
+    </ul>
+  
+  <%= link_to '編集', edit_diet_path(@diet), class: 'btn btn-info btn-block' %>
+  <%= link_to '削除', @diet, method: :delete, class: 'btn btn-secondary btn-block', data: { confirm: '本当に削除してよろしいですか？' } %>
+  </div>
 </div>

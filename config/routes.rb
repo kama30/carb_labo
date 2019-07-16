@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   get '/:start_time/diets', to: 'diets#daily_index'
   get '/:start_time/diet', to: 'diets#daily_new'
+  get '/twitter/index', to: 'twitter#index'
   
   get 'signup', to: 'users#new'
   resources :users, only: [:show, :create, :edit, :update]

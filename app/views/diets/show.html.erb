@@ -26,8 +26,14 @@
         摂取糖質量　　：<%= @diet.sugar %> g
       </li>
     </ul>
-  
   <%= link_to '編集', edit_diet_path(@diet), class: 'btn btn-info btn-block' %>
   <%= link_to '削除', @diet, method: :delete, class: 'btn btn-secondary btn-block', data: { confirm: '本当に削除してよろしいですか？' } %>
+  
+    <div class="text-center mt-5">
+      <div class="col-md-1 d-inline">
+        <a target="blank" href="https://twitter.com/intent/tweet?text=<%= @diet.name %>を食べて<%= @diet.carb %>g糖質を摂取しました！&url=http://carb-labo.herokuapp.com/&hashtags=carb_lab"><i class="fab fa-twitter" id="icon-twitter"></i></a>
+      </div>
+      <%= render 'layouts/button' %>
+    </div>
   </div>
 </div>

@@ -5,16 +5,17 @@
 <div class="offset-md-3 col-md-6 mt-3">
   <%= link_to '食事登録', {controller: "diets", action: "daily_new", start_time: params[:start_time]}, class: 'btn btn-info btn-block' %>
   <%= link_to '戻る', user_path(current_user.id), class: 'btn btn-secondary btn-block' %>
-
-  <div class="text-center mt-5">
-    <div class="col-md-1 d-inline">
-      <% if current_user.goal %>
-        <a target="blank" href="https://twitter.com/intent/tweet?text=今日は<%= @diets.sum(:carb) %>g糖質を摂取しました。目標値<%= current_user.goal %>gまであと<%= @diets.sum(:carb) - current_user.goal %>gです！&url=http://carb-labo.herokuapp.com/&hashtags=carb_lab"><i class="fab fa-twitter" id="icon-twitter"></i></a>
-      <% else %>
-        <a target="blank" href="https://twitter.com/intent/tweet?text=今日は<%= @diets.sum(:carb) %>g糖質を摂取しました！&url=http://carb-labo.herokuapp.com/&hashtags=carb_lab"><i class="fab fa-twitter" id="icon-twitter"></i></a>
-      <% end %>
+  
+  <footer>
+    <div class="text-center mt-5">
+      <div class="col-md-1 d-inline">
+        <% if current_user.goal %>
+          <a target="blank" href="https://twitter.com/intent/tweet?text=今日は<%= @diets.sum(:carb) %>g糖質を摂取しました。目標値<%= current_user.goal %>gまであと<%= @diets.sum(:carb) - current_user.goal %>gです！&url=http://carb-labo.herokuapp.com/&hashtags=carb_lab"><%= image_tag('twitter.png', alt: "twitterアイコン", id: "icon-twitter", class: "icon") %></a>
+        <% else %>
+          <a target="blank" href="https://twitter.com/intent/tweet?text=今日は<%= @diets.sum(:carb) %>g糖質を摂取しました！&url=http://carb-labo.herokuapp.com/&hashtags=carb_lab"><%= image_tag('twitter.png', alt: "twitterアイコン", id: "icon-twitter", class: "icon") %></a>
+        <% end %>
+      </div>
+      <%= render 'layouts/button' %>
     </div>
-    <%= render 'layouts/button' %>
-  </div>
-    
+  </footer>
 </div>

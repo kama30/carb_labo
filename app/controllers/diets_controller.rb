@@ -9,6 +9,7 @@ class DietsController < ApplicationController
   end
   
   def show
+    @special_twitter = true
   end
   
   def new
@@ -47,11 +48,11 @@ class DietsController < ApplicationController
   end
   
   def daily_index
+    @special_twitter = true
     @diets = current_user.diets.where(start_time: params[:start_time]).order(id: :desc).page(params[:page]).per(25)
   end
   
   def daily_new
-    p params
     @diet = current_user.diets.build(start_time: params[:start_time])
   end
   

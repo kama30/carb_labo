@@ -1,6 +1,21 @@
 // Place all the styles related to the toppages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-blockquote.twitter-tweet {
-  display: inline-block;
+
+// blockquote.twitter-tweet {
+//   display: inline-block;
+// }
+
+#white-logo {
+  height: 450%;
+  width: 45%;
+  filter: brightness(0) invert(1);
+  margin-bottom: 4px;
+}
+
+#explain-title {
+  color: white;
+  font-family: "Bookman Old Style";
+  font-size: 34px;
+  margin-top: 8px;
 }

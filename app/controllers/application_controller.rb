@@ -10,4 +10,7 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def set_layout_difference
+    @special_twitter = nil
+  end
 end

@@ -23,6 +23,20 @@
       <%= render 'layouts/flash_messages' %>
 
       <%= yield %>
+      
+      <footer>
+        <% if @special_twitter == nil %>
+        <div class="offset-md-3 col-md-6 mt-3">
+          <div class="text-center mt-5">
+            <div class="col-md-1 d-inline">
+              <a target="blank" href="https://twitter.com/intent/tweet?text=carb_laboで糖質を管理しよう！&url=http://carb-labo.herokuapp.com/&hashtags=carb_lab"><%= image_tag('twitter.png', alt: "twitterアイコン", id: "icon-twitter", class: "icon") %></a>
+            </div>
+            <%= render 'layouts/button' %>
+          </div>
+        </div>
+        <% end %>
+      </footer>
+      
     </div>
   </body>
 </html>

@@ -33,12 +33,6 @@ h1 {
   width: 45px; 
 }
 
-#icon-gplus {
-  color: #DB4437;
-  height: 47px;
-  width: 47px;
-}
-
 #icon-twitter {
      height: 46px;
      width: 46px;
@@ -46,4 +40,12 @@ h1 {
  
 .navbar {
  box-shadow:0px 4px 0px 1px #191970;
+}
+
+.icon {
+  transition: all  0.1s ease;
+}
+
+.icon:hover {
+  filter:brightness(80%);
 }

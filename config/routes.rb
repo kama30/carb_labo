@@ -9,6 +9,12 @@ Rails.application.routes.draw do
   get '/twitter/index', to: 'twitter#index'
   
   get 'signup', to: 'users#new'
-  resources :users, only: [:show, :create, :edit, :update]
+  resources :users, only: [:show, :create, :edit, :update] do
+    member do
+      get :weekly_records
+      get :monthly_records
+      get :yearly_records
+    end
+  end
   resources :diets
 end

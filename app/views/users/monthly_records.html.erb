@@ -1,0 +1,8 @@
+<div class="row">
+  <aside class="col-md-6 offset-md-3 mt-3">
+    <%= render 'tabs' %>
+    <%= area_chart @monthly_records.group_by_day(:start_time).sum(:sugar), xmin: Date.today.last_month, xmax: Date.today, curve: false, messages: {empty: "No data"} %>
+  </div>
+</div>
+
+<%= render 'buttons'%>

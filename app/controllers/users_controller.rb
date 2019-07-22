@@ -35,6 +35,18 @@ class UsersController < ApplicationController
     end
   end
   
+  def weekly_records
+    @weekly_records = Diet.where(user_id: current_user.id, start_time: Date.today.prev_week...Date.tomorrow)
+  end
+  
+  def monthly_records
+    @monthly_records = Diet.where(user_id: current_user.id, start_time: Date.today.last_month...Date.tomorrow)
+  end
+  
+  def yearly_records
+    @yearly_records = Diet.where(user_id: current_user.id, start_time: Date.today.last_year...Date.tomorrow)
+  end
+  
   private
   
   def user_params

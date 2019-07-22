@@ -1,0 +1,5 @@
+<ul class="nav nav-tabs mb-3">
+  <li class="nav-item"><a href="<%= weekly_records_user_path(current_user) %>" class="nav-link <%= 'active' if current_page?(weekly_records_user_path(current_user)) %>">週</a></li>
+  <li class="nav-item"><a href="<%= monthly_records_user_path(current_user) %>" class="nav-link <%= 'active' if current_page?(monthly_records_user_path(current_user)) %>">月</a></li>
+  <li class="nav-item"><a href="<%= yearly_records_user_path(current_user) %>" class="nav-link <%= 'active' if current_page?(yearly_records_user_path(current_user)) %>">年</a></li>
+</ul>
